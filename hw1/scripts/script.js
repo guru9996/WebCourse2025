@@ -1,19 +1,19 @@
-let burger_button_open = document.getElementById('info__burg-button');
-let burger_button_close = document.getElementById('info__close-burg-button');
-let menu = document.getElementById('info__burg-links')
+let burgerButtonOpen = document.getElementById('infoBurgButton');
+let burgerButtonClose = document.getElementById('infoCloseBurgButton');
+let menu = document.getElementById('infoBurgLinks')
 
 
-burger_button_close.addEventListener('click', returner);
-burger_button_open.addEventListener('click', burgermenu);
+burgerButtonClose.addEventListener('click', returner);
+burgerButtonOpen.addEventListener('click', burgerMenu);
 
-function burgermenu(){
-    console.log('biba');
-    burger_button_close.classList.remove('hidden')
-    burger_button_open.classList.add('hidden')
+function burgerMenu(){
+
+    burgerButtonClose.classList.remove('hidden')
+    burgerButtonOpen.classList.add('hidden')
     menu.classList.remove('hidden')
 }
 function returner(){
-    burger_button_close.classList.add('hidden')
-    burger_button_open.classList.remove('hidden')
+    burgerButtonClose.classList.add('hidden')
+    burgerButtonOpen.classList.remove('hidden')
     menu.classList.add('hidden')
 }
