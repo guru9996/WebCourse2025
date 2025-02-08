@@ -90,9 +90,8 @@ const task4 = (arr, num) =>{
         } else if (arr[d] < num){
             i = d + 1
         } else if (arr[d]=num ){
-            return d
+            return `индекс ${num} в массиве ${arr} - ${d}`
         }
-
     }
     return "такого элемента в массиве нет"
 }
