@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styels/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
@@ -11,13 +15,13 @@
         <img src="./images/man.svg" alt="cartinka">
     </div>    
     <form class="form">
-        <label>Электропочта</label>
-        <input type="email">
+        <label class="form__header">Электропочта</label>
+        <input class="form__field" type="email">
         <p class="form__email-hint">Введите электропочту в формате *****@***.**</p>
-        <label>Пароль</label>
-        <input type="password">
+        <label class="form__header">Пароль</label>
+        <input class="form__field" type="password">
         <img src="./images/eye.svg" alt="cartinka">
-        <button type="submit">Продолжить</button>
+        <button class="form__submit-button" type="submit">Продолжить</button>
     </form>
 </body>
 </html>
