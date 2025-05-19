@@ -160,8 +160,7 @@ console.log("randomPassword: ", generatePassword(12))
 
 
 const combineMapAndFilter = (nums) => {
-    nums = nums.map((num) => num * 3).filter((num) => num > 10) 
-    return nums
+    return nums.map((num) => num * 3).filter((num) => num > 10) 
 }
 
 const numbers = [2, 5, 8, 10, 3];
