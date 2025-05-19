@@ -100,7 +100,19 @@ const generatePassword = (len) => {
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     let lowerCaseChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я']
     let digits = ['1','2','3','4','5','6','7','8','9','0']
-    let allChars = specialChars + upperCaseChars + lowerCaseChars + digits
+    let allChars = []
+    for(let i = 0; i < specialChars.length; i++){
+        allChars.push(specialChars[i])
+    }
+    for(let i = 0; i < upperCaseChars.length; i++){
+        allChars.push(upperCaseChars[i])
+    }
+    for(let i = 0; i < lowerCaseChars.length; i++){
+        allChars.push(lowerCaseChars[i])
+    }
+    for(let i = 0; i < digits.length; i++){
+        allChars.push(digits[i])
+    }
     let usedPlaces = []
     let password = ""
     if (len < 4){
@@ -149,10 +161,10 @@ const generatePassword = (len) => {
                     }
                 }
             }
-         
+        
         
         }
     }
     return password
 }
-console.log("randomPassword: ", generatePassword(3))
+console.log("randomPassword: ", generatePassword(100))
