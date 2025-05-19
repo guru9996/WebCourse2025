@@ -103,8 +103,9 @@ const generatePassword = (len) => {
     let allChars = specialChars + upperCaseChars + lowerCaseChars + digits
     let usedPlaces = []
     let password = ""
-
-    
+    if (len < 4){
+        return "inrorrect length"
+    }    
 
     let randomSpecialCharPlace = Math.floor(Math.random() * len);
     usedPlaces.push(randomSpecialCharPlace)
@@ -121,24 +122,37 @@ const generatePassword = (len) => {
     }
     usedPlaces.push(randomDigitPlace)
 
+    let randomLowerCaseCharPlace = randomSpecialCharPlace;
+    while(usedPlaces.indexOf(randomLowerCaseCharPlace) !== -1){
+        randomLowerCaseCharPlace = Math.floor(Math.random() * len)
+    }
+    usedPlaces.push(randomLowerCaseCharPlace)
+
     for(let i = 0; i < len; i++){
         if (i === randomSpecialCharPlace){
             password += specialChars[Math.floor(Math.random() * specialChars.length)]
-        }else{
+        }
+        else{
             if (i === randomUpperCaseCharPlace){
                 password += upperCaseChars[Math.floor(Math.random() * upperCaseChars.length)]
-            } else{
+            } 
+            else{
                 if (i === randomDigitPlace){
                     password += digits[Math.floor(Math.random() * digits.length)]
-                } else{
-                    password += allChars[Math.floor(Math.random() * allChars.length)]
+                } 
+                else{
+                    if (i === randomLowerCaseCharPlace){
+                        password += lowerCaseChars[Math.floor(Math.random() * lowerCaseChars.length)]
+                    } 
+                    else {
+                        password += allChars[Math.floor(Math.random() * allChars.length)]
+                    }
                 }
             }
-        }
          
         
+        }
     }
-
     return password
 }
-console.log("randomPassword: ", generatePassword(10))
+console.log("randomPassword: ", generatePassword(3))
