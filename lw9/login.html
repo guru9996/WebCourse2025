@@ -16,12 +16,20 @@
             <img src="./images/man.svg" alt="cartinka">
         </div>    
         <form class="form">
-            <label class="form__header">Электропочта</label>
-            <input class="form__field" type="email">
-            <p class="form__email-hint">Введите электропочту в формате *****@***.**</p>
-            <label class="form__header">Пароль</label>
-            <input class="form__field" type="password">
-            <img src="./images/eye.svg" alt="cartinka">
+            <div class="email">
+                <label class="email__header">Электропочта</label>
+                <input class="email__field" type="email">
+                <p class="email__email-hint">Введите электропочту в формате *****@***.**</>
+            </div>
+            <div class="pass">
+                <label class="pass__header">Пароль</label>
+                <div class="field-container">
+                    <input class="pass__field" type="password">
+                    <img class ="field-container__img" src="./images/eye.svg" alt="cartinka">
+                </div>
+                
+                
+            </div>
             <button class="form__submit-button" type="submit">Продолжить</button>
         </form>
     </div>
