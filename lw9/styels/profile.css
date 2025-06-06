@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+.profile__name{
+    font-family: "Golos", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #222;
+}
+.profile__info{
+    font-family: "Golos", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #222;
+}
+.main-container__info{
+    border-right: 1px solid rgba(34, 34, 34, 0.05);
+}
+.photos__photo{
+    width: 322px;
+    height: 322px;
+}
